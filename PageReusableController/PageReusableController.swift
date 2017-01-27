@@ -34,6 +34,7 @@ class PageReusableController: UIViewController, UIScrollViewDelegate, UIPageView
         }
     }
     override func loadView() {
+        //lets start from loadview
         let viewd = UIView.init(frame: UIScreen.main.bounds)
         self.view = viewd
         self.edgesForExtendedLayout = []
