@@ -134,11 +134,11 @@ class PageReusableController: UIViewController, UIScrollViewDelegate, UIPageView
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        if let visibleController = previousViewControllers.last as? PageContentController{
+        if let _ = previousViewControllers.last as? PageContentController{
             if completed{
                 self.currentIndex = self.nextIndex
                 print(self.currentIndex)
-               visibleController.setContent()
+             //  visibleController.setContent()
             }
             else{
                 self.nextIndex = self.currentIndex
